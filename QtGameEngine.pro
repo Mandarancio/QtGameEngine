@@ -1,3 +1,4 @@
+QT += opengl
 HEADERS += \
     AbstractSpirit.h \
     Vector3D.h \
