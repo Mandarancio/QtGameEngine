@@ -1,6 +1,8 @@
 #ifndef GAMEDISPLAYWIDGET_H
 #define GAMEDISPLAYWIDGET_H
 
+namespace QtGameEngine {
+namespace UI {
 #include <QGLWidget>
 
 class GameDisplayWidget : public QGLWidget
@@ -14,5 +16,11 @@ signals:
 public slots:
 
 };
+
+
+
+}
+
+}
 
 #endif // GAMEDISPLAYWIDGET_H
