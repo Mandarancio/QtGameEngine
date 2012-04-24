@@ -1,9 +1,9 @@
 #ifndef GAMEDISPLAYWIDGET_H
 #define GAMEDISPLAYWIDGET_H
+#include <QGLWidget>
 
 namespace QtGameEngine {
 namespace UI {
-#include <QGLWidget>
 
 class GameDisplayWidget : public QGLWidget
 {
