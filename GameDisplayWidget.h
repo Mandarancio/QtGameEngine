@@ -1,5 +1,5 @@
-#ifndef GAMEDISPLAYWIDGET_H
-#define GAMEDISPLAYWIDGET_H
+#ifndef GAME_DISPLAY_WIDGET_H
+#define GAME_DISPLAY_WIDGET_H
 #include <QGLWidget>
 
 namespace QtGameEngine {
@@ -14,6 +14,11 @@ public:
 signals:
 
 public slots:
+protected:
+    virtual void initializeGL();
+    virtual void resizeGL(int w, int h);
+    virtual void paintGL();
+
 
 };
 
