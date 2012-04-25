@@ -6,12 +6,22 @@ HEADERS += \
     GameDisplayWidget.h \
     Game.h \
     AbstractRenderer.h \
-    AbstractRenderingObject.h
+    AbstractRenderingObject.h \
+    InputMapper.h \
+    AbstractInputHandler.h
 
 SOURCES += \
     Vector3D.cpp \
     GameDisplayWidget.cpp \
-    Game.cpp
+    Game.cpp \
+    InputMapper.cpp
+
+
+
+
+
+
+
 
 
 

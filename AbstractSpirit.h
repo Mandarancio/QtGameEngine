@@ -8,8 +8,9 @@ class AbstractSpirit
 {
 public:
     Vector3D getCoordinate();
-    void setCoordinate(Vector3D coordinate);
-
+    void setCoordinate(Vector3D& coordinate);
+    Vector3D getDirection();
+    void setDirection(Vector3D& direction);
 
 
 

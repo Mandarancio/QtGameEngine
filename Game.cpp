@@ -13,6 +13,7 @@ Game::Game(int argc, char *argv[])
 Game::~Game()
 {
     killTimer(timerID);
+    delete display;
 }
 
 void Game::timerEvent(QTimerEvent *e)
@@ -22,6 +23,11 @@ void Game::timerEvent(QTimerEvent *e)
         e->accept();
         emit frame();
     }
+}
+int Game::start()
+{
+    display->show();
+    return exec();
 }
 
 

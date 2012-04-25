@@ -11,6 +11,7 @@ class Game : public QApplication
 public:
     Game(int argc,char* argv[]);
     ~Game();
+    int start();
 signals:
     void initialize();
     void frame();
