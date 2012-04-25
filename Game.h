@@ -1,18 +1,25 @@
 #ifndef GAME_H
 #define GAME_H
 #include "GameDisplayWidget.h"
-
+#include <QApplication>
 namespace QtGameEngine
 {
 using namespace UI;
-class Game
+class Game : public QApplication
 {
+    Q_OBJECT
 public:
-    Game();
+    Game(int argc,char* argv[]);
     ~Game();
+signals:
+    void initialize();
+    void frame();
+
+protected:
+    virtual void timerEvent(QTimerEvent *e);
 private:
     GameDisplayWidget* display;
-
+    int timerID;
 };
 
 }

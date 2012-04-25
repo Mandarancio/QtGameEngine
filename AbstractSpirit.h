@@ -3,8 +3,6 @@
 #include "Vector3D.h"
 namespace QtGameEngine
 {
-namespace RenderingEngine
-{
 using namespace Math;
 class AbstractSpirit
 {
@@ -23,5 +21,4 @@ private:
 
 }
 
-}
 #endif // ABSTRACTSPIRIT_H

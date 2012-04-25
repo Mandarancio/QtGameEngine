@@ -1,9 +1,11 @@
 #ifndef GAME_DISPLAY_WIDGET_H
 #define GAME_DISPLAY_WIDGET_H
 #include <QGLWidget>
+#include "AbstractRenderer.h"
 
 namespace QtGameEngine {
 namespace UI {
+using namespace RenderingEngine;
 
 class GameDisplayWidget : public QGLWidget
 {
@@ -14,10 +16,16 @@ public:
 signals:
 
 public slots:
+    void setRenderer(AbstractRenderer* renderer);
 protected:
     virtual void initializeGL();
     virtual void resizeGL(int w, int h);
     virtual void paintGL();
+
+private:
+    AbstractRenderer* renderer;
+
+
 
 
 };
