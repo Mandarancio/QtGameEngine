@@ -11,12 +11,11 @@ namespace InputEngine {
 class InputMapper
 {
 public:
-    InputMapper();
-    void addKeyboardHandler(int key,AbstractInputHandler handler);
-    void addMouseHandler(Qt::MouseButton mouseButton,AbstractInputHandler handler);
+    void addKeyboardHandler(int key,AbstractInputHandler* handler);
+    void addMouseHandler(Qt::MouseButton mouseButton,AbstractInputHandler* handler);
 
-    InputHandler getInputHandler(Qt::MouseButton mouseButton);
-    InputHandler getInputHandler(int key);
+    AbstractInputHandler* getInputHandler(Qt::MouseButton mouseButton);
+    AbstractInputHandler* getInputHandler(int key);
 
 
 

@@ -35,15 +35,23 @@ void GameDisplayWidget::setRenderer(AbstractRenderer *renderer)
 void GameDisplayWidget::keyPressEvent(QKeyEvent *e)
 {
     e->accept();
-    mapper->getInputHandler(e->key());
+
+    AbstractInputHandler* handler = mapper->getInputHandler(e->key());
+    if(handler)
+        handler->handleInput();
+
 }
 void GameDisplayWidget::mousePressEvent(QMouseEvent *e)
 {
     e->accept();
-    mapper->getInputHandler(e->button());
+    AbstractInputHandler* handler = mapper->getInputHandler(e->button());
+    if(handler)
+        handler->handleInput();
 }
 
-
+void GameDisplayWidget::setInputMapper(InputMapper *mapper)
+{
+}
 }
 
 }
