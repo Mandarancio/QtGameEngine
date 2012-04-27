@@ -17,7 +17,7 @@ public:
 
 private:
     Vector3D coordinate;
-
+    Vector3D direction;
 };
 
 }

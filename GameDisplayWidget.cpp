@@ -6,7 +6,8 @@ namespace UI {
 GameDisplayWidget::GameDisplayWidget(QWidget *parent) :
     QGLWidget(parent)
 {
-
+    setRenderer(0);
+    setInputMapper(0);
 }
 
 

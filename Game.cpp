@@ -2,11 +2,11 @@
 namespace QtGameEngine
 {
 
-Game::Game(int argc, char *argv[])
+Game::Game(int& argc, char *argv[])
     :QApplication(argc,argv)
 {
     display = new GameDisplayWidget;
-    timerID = startTimer(34);
+    display->setInputMapper(&mapper);
     connect(this,SIGNAL(frame()),display,SLOT(updateGL()));
 }
 
@@ -27,6 +27,7 @@ void Game::timerEvent(QTimerEvent *e)
 int Game::start()
 {
     display->show();
+    timerID = startTimer(34);
     return exec();
 }
 

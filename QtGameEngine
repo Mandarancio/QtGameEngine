@@ -1,0 +1,13 @@
+#ifndef QT_GAME_ENGINE_H
+#define QT_GAME_ENGINE_H
+#include "AbstractInputHandler.h"
+#include "AbstractRenderer.h"
+#include "AbstractRenderingObject.h"
+#include "AbstractScene.h"
+#include "AbstractSpirit.h"
+#include "Vector3D.h"
+#include "Game.h"
+
+
+
+#endif // QTGAMEENGINE_H

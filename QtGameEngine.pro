@@ -1,5 +1,12 @@
 QT += opengl
 
+
+TARGET = QtGameEngine
+TEMPLATE = lib
+CONFIG += staticlib
+
+
+
 HEADERS += \
     AbstractSpirit.h \
     Vector3D.h \
@@ -8,13 +15,17 @@ HEADERS += \
     AbstractRenderer.h \
     AbstractRenderingObject.h \
     InputMapper.h \
-    AbstractInputHandler.h
+    AbstractInputHandler.h \
+    AbstractScene.h \
+    QtGameEngine
 
 SOURCES += \
     Vector3D.cpp \
     GameDisplayWidget.cpp \
     Game.cpp \
     InputMapper.cpp
+
+
 
 
 
